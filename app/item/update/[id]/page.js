@@ -16,7 +16,7 @@ const UpdateItem = (context) => {
     useEffect(() => {
       const getSingleItem = async() => {
         const params = await context.params
-        const response = await fetch(`http://localhost:3000/api/item/readsingle/${params.id}`)
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/item/readsingle/${params.id}`)
         const jsonData = await response.json()
         const singleItem = jsonData.singleItem
         setTitle(singleItem.title)
@@ -32,7 +32,7 @@ const UpdateItem = (context) => {
         e.preventDefault()
         const params = await context.params
         try{
-            const response = await fetch(`http://localhost:3000/api/item/update/${params.id}`,{
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/item/update/${params.id}`,{
                 method: "PUT",
                 headers: {
                     "Accept": "application/json",
