@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Header = () => {
     return(
-        <Header>
+        <header>
             <div>
                 <Link href="/">
-                <Image src="/heder.svg" width={1330} height={148} alt="header-image" priority/>
+                <Image src="/header.svg" width={1330} height={148} alt="header-image" priority/>
                 </Link>
             </div>
             <nav>
@@ -22,7 +22,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-        </Header>
+        </header>
     )
 }
 
