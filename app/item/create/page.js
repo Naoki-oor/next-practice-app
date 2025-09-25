@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import useAuth from "@/app/utils/useAuth"
+import ImgInput from "@/app/components/imgInput"
 
 const CreateItem = () => {
     const [title, setTitle] = useState("")
@@ -40,6 +41,7 @@ const CreateItem = () => {
     return(
         <div>
             <h1 className="page-title">アイテム作成</h1>
+            <ImgInput setImage={setImage}/>
 
             <form onSubmit={handleSubmit}>
                 <input value={title} onChange={(e) => setTitle(e.target.value)} 
